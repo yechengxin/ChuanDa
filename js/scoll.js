@@ -1,3 +1,4 @@
+$("#page0").css({ "animation": "myfirst 5s", });
 //重要！禁止移动端滑动的默认事件
 document.body.addEventListener('touchmove', function(event) {
     event = event ? event : window.event;
@@ -21,11 +22,14 @@ var pages = function(obj) {
     window.addEventListener('resize', getH, false);
     //touchStart
     var touchstart = function(event) {
+        $("#page" + n).css({ "animation": "", });
+        console.log(n)
         if (!event.touches.length) {
             return;
         }
         startY = event.touches[0].pageY;
         moveY = 0;
+        console.log(1)
     };
     //touchMove
     var touchmove = function(event) {
@@ -34,6 +38,7 @@ var pages = function(obj) {
         }
         moveY = event.touches[0].pageY - startY;
         box2.style.transform = 'translateY(' + (-n * cliH + moveY) + 'px)'; //根据手指的位置移动页面
+        console.log(2)
     };
     //touchEnd
     var touchend = function(event) {
@@ -45,7 +50,9 @@ var pages = function(obj) {
         if (n > len - 1) n = len - 1;
         //重定位
         box2.style.transform = 'translateY(' + (-n * 10) + '%)'; //根据百分比位置移动页面
+        console.log(3)
         console.log(n)
+        $("#page" + n).css({ "animation": "myfirst 5s", });
     };
     //touch事件绑定
     box.addEventListener("touchstart", function(event) {

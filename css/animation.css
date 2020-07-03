@@ -1,0 +1,13 @@
+@keyframes myfirst {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: yellow;
+    }
+}
+
+
+/* #page0 {
+    animation: myfirst 5s;
+} */
