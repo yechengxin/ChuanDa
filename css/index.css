@@ -1,0 +1,11 @@
+* {
+    padding: 0;
+    margin: 0
+}
+
+body,
+html {
+    touch-action: none;
+    height: 100%;
+    background-color: #000
+}
