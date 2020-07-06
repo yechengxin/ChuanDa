@@ -1,7 +1,7 @@
 @keyframes myfirst {
     from {
-        top: 500px;
-        left: 500px;
+        top:0;
+        left: 150rem;
     }
     to {
         top: 0;

@@ -7,7 +7,8 @@ body,
 html {
     touch-action: none;
     height: 100%;
-    background-color: #000
+    background-color: #000;
+    font-size: calc(100vw/100);
 }
 
 .page div {
@@ -17,4 +18,5 @@ html {
     text-align: center;
     line-height: 100px;
     position: relative;
+    background-color: aquamarine;
 }
