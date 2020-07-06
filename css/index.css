@@ -16,6 +16,5 @@ html {
     font-size: 10px;
     text-align: center;
     line-height: 100px;
-    left: 0;
-    top: 0;
+    position: relative;
 }

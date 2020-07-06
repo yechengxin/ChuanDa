@@ -69,7 +69,7 @@ pages({
     wrap: 'wrap', //.wrap的id
     wrap2: 'wrap2', //.wrap2的id
     len: (function() {
-        return document.getElementById("wrap2").getElementsByTagName("div").length
+        return document.getElementById("wrap2").getElementsByClassName("page").length
     }()),
     n: 0, //页面一打开默认在第几页？第一页就是0，第二页就是1
 });

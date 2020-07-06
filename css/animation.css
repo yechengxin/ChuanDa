@@ -1,13 +1,15 @@
 @keyframes myfirst {
     from {
-        background-color: white;
+        top: 500px;
+        left: 500px;
     }
     to {
-        background-color: yellow;
+        top: 0;
+        left: 0;
     }
 }
 
-
-/* #page0 {
+#page0 {
     animation: myfirst 5s;
-} */
+    -webkit-animation: mymove 5s infinite;
+}
