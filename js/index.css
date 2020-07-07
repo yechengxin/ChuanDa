@@ -17,7 +17,10 @@ html {
     font-size: 8rem;
     line-height: 15vh;
 }
-
+.center{
+    font-size: 10rem;
+    line-height: 100vh;
+}
 .text {
     margin: 0 auto;
     width: 90vw;
