@@ -1,7 +1,7 @@
 @keyframes myfirst {
     from {
-        top: 500px;
-        left: 500px;
+        top: 90rem;
+        left: 90rem;
     }
     to {
         top: 0;
@@ -9,7 +9,9 @@
     }
 }
 
+
+/* 
 #page0 {
     animation: myfirst 5s;
     -webkit-animation: mymove 5s infinite;
-}
+} */

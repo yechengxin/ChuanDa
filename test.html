@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+
+<head runat="server">
+    <title>JQuery点击图片查看大图by starof</title>
+    <style type="text/css">
+        .exampleImg {
+            height: 100px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+        //alert($);
+        // (function (window, undefined) {
+        // var MyJQuery = function () {
+        // window.MyjQuery = window.$ = jQuery; window.$ = MyJQuery;
+        // };
+        // })(window);
+        // alert($);
+        $.fn.ImgZoomIn = function() {
+            bgstr = '<div id="ImgZoomInBG" style=" background:#000000; filter:Alpha(Opacity=70); opacity:0.7; position:fixed; left:0; top:0; z-index:10000; width:100%; height:100%; display:none;"><iframe src="about:blank" frameborder="5px" scrolling="yes" style="width:100%; height:100%;"></iframe></div>';
+            //alert($(this).attr('src'));
+            imgstr = '<img id="ImgZoomInImage" src="' + $(this).attr('src') + '" onclick=$(\'#ImgZoomInImage\').hide();$(\'#ImgZoomInBG\').hide(); style="cursor:pointer; display:none; position:absolute; z-index:10001;" />';
+            if ($('#ImgZoomInBG').length < 1) {
+                $('body').append(bgstr);
+            }
+            if ($('#ImgZoomInImage').length < 1) {
+                $('body').append(imgstr);
+            } else {
+                $('#ImgZoomInImage').attr('src', $(this).attr('src'));
+            }
+            //alert($(window).scrollLeft());
+            //alert( $(window).scrollTop());
+            $('#ImgZoomInImage').css('left', $(window).scrollLeft() + ($(window).width() - $('#ImgZoomInImage').width()) / 2);
+            $('#ImgZoomInImage').css('top', $(window).scrollTop() + ($(window).height() - $('#ImgZoomInImage').height()) / 2);
+            $('#ImgZoomInBG').show();
+            $('#ImgZoomInImage').show();
+        };
+        $(document).ready(function() {
+            $("#imgTest").bind("click", function() {
+                $(this).ImgZoomIn();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <!--第一种写法-->
+        <img class="exampleImg" src="images/fm.png" id="imgTest" />
+        <!--第二种写法-->
+        <img class="exampleImg" src="images/fm.png" onClick="$(this).ImgZoomIn();" />
+    </div>
+</body>
+
+</html>
