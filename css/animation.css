@@ -1,4 +1,4 @@
-@keyframes myfirst {
+/* @keyframes myfirst {
     from {
         top:0;
         left: 150rem;
@@ -7,7 +7,7 @@
         top: 0;
         left: 0;
     }
-}
+} */
 
 #page0 {
     animation: myfirst 5s;
