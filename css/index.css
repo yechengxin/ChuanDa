@@ -24,6 +24,17 @@ html {
     position: relative;
 }
 
+.mulu {
+    margin: 2.5vh auto;
+    width: 90vw;
+    height: auto;
+    max-width: 300px;
+    text-align: justify;
+    line-height: 15vh;
+    font-size: 5rem;
+    position: relative;
+}
+
 .center {
     font-size: 10rem;
     line-height: 100vh;
