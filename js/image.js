@@ -1,26 +1,25 @@
-var img_click = function(obj) {
-    console.log("点击了图片")
-        var temp = obj.src;
-        var objE = document.createElement("div");
-        objE.innerHTML = '<div class="bgM" >' +
-            '<img src="' + temp + '"  id="img_scan" class="img-custom-img2"/>' +
-            '</div>';
-        document.body.appendChild(objE.children[0]);
-        //退出图片预览事件
-        var $bg = document.querySelector(".bgM");
-        $bg.onclick = function() {
-            var dm = document.querySelector(".bgM");
-            document.body.removeChild(dm);
-        }
+var img_click = function (obj) {
+    var temp = obj.src;
+    var objE = document.createElement("div");
+    objE.innerHTML = '<div class="bgM" >' +
+        '<img src="' + temp + '"  id="img_scan" class="img-custom-img2"/>' +
+        '</div>';
+    document.body.appendChild(objE.children[0]);
+    //退出图片预览事件
+    var $bg = document.querySelector(".bgM");
+    $bg.onclick = function () {
+        var dm = document.querySelector(".bgM");
+        document.body.removeChild(dm);
+    }
 
-        var $img = document.querySelector(".img-custom-img2");
+    var $img = document.querySelector(".img-custom-img2");
 
-        $img.onclick = function(event) {
-            event.stopPropagation();
-        }
+    $img.onclick = function (event) {
+        event.stopPropagation();
+    }
 
-        createEvent(); //自定义事件
-        previewImg(); //图片预览事件监听
+    createEvent(); //自定义事件
+    previewImg(); //图片预览事件监听
 }
 /*
  *  自定义移动端手势事件  
@@ -32,7 +31,7 @@ var img_click = function(obj) {
  *  - doubleTouch       双击
  *  - oneTouch          单击
  */
-var createEvent = function() {
+var createEvent = function () {
 
     var $bm = document.querySelector(".bgM");
     //
@@ -52,7 +51,7 @@ var createEvent = function() {
 
 
     //监听touchstart事件
-    $bm.addEventListener('touchstart', function(e) {
+    $bm.addEventListener('touchstart', function (e) {
         //e.preventDefault();
         if (e.touches.length >= 2) { //判断是否有两个点在屏幕上
             isDoubleTouch = true;
@@ -69,7 +68,7 @@ var createEvent = function() {
                 doubleTouch.position = [e.touches[0].pageX - e.target.offsetLeft, e.touches[0].pageY - e.target.offsetTop];
                 e.target.dispatchEvent(doubleTouch);
             } else { //滑动事件
-                timer = setTimeout(function() {
+                timer = setTimeout(function () {
                     e.target.dispatchEvent(oneTouch); //单击事件
                 }, 450)
             }
@@ -78,7 +77,7 @@ var createEvent = function() {
     }, false);
 
     //监听touchmove事件
-    $bm.addEventListener('touchmove', function(e) {
+    $bm.addEventListener('touchmove', function (e) {
         //e.preventDefault();
         clearTimeout(timer);
         if (e.touches.length >= 2 && isDoubleTouch) { //手势事件
@@ -99,7 +98,7 @@ var createEvent = function() {
     }, false);
 
     //监听touchend事件
-    $bm.addEventListener('touchend', function(e) {
+    $bm.addEventListener('touchend', function (e) {
         if (isDoubleTouch) {
             isDoubleTouch = false;
             gestureend.position = endPosition;
@@ -138,7 +137,7 @@ var createEvent = function() {
 /*
  * 事件处理
  */
-var previewImg = function() {
+var previewImg = function () {
 
     var $imgs = document.querySelector("#img_scan");
 
