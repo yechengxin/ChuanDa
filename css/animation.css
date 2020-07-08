@@ -1,17 +1,16 @@
-@keyframes myfirst {
+@keyframes text {
     from {
-        top: 90rem;
-        left: 90rem;
+        left: 100vw;
     }
     to {
-        top: 0;
         left: 0;
     }
 }
-
-
-/* 
-#page0 {
-    animation: myfirst 5s;
-    -webkit-animation: mymove 5s infinite;
-} */
+@keyframes image {
+    from {
+        right: 100vw;
+    }
+    to {
+        right: 0;
+    }
+}

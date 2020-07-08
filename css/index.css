@@ -21,6 +21,7 @@ html {
     height: 15vh;
     font-size: 8rem;
     line-height: 15vh;
+    position: relative;
 }
 .center{
     font-size: 10rem;
@@ -36,12 +37,14 @@ html {
     line-height: 5vh;
     font-size: 3rem;
     text-indent:2em;
+    position: relative;
 }
 
 .image {
     margin: 2.5vh auto;
     width: 100vw;
     height: auto;
+    position: relative;
 }
 
 .image img {
@@ -58,4 +61,5 @@ html {
     text-align: center;
     line-height: 5vh;
     font-size: 3rem;
+    position: relative;
 }
