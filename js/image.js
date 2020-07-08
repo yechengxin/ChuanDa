@@ -169,8 +169,8 @@ var previewImg = function() {
                 maxSwipeRight = Math.abs(sca - 1) * (imgWidth - originLast[0]);
                 maxSwipeTop = Math.abs(sca - 1) * originLast[1];
                 maxSwipeBottom = Math.abs(sca - 1) * (imgHeight - originLast[1]); */
-        maxSwipeLeft = 0;
-        maxSwipeRight = 0;
+        maxSwipeLeft = Math.abs(sca - 1) * originLast[0];
+        maxSwipeRight = Math.abs(sca - 1) * (imgWidth - originLast[0]);
         maxSwipeTop = 0;
         maxSwipeBottom = 0;
     }
