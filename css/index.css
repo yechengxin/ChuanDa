@@ -18,12 +18,13 @@ html {
 
 .title {
     width: 100vw;
-    height: 15vh;
+    height: 20vh;
     font-size: 8rem;
-    line-height: 15vh;
+    line-height: 20vh;
     position: relative;
 }
-.center{
+
+.center {
     font-size: 10rem;
     line-height: 100vh;
 }
@@ -36,7 +37,7 @@ html {
     text-align: justify;
     line-height: 5vh;
     font-size: 3rem;
-    text-indent:2em;
+    text-indent: 2em;
     position: relative;
 }
 
@@ -53,7 +54,7 @@ html {
     height: auto;
 }
 
-.lianxi{
+.lianxi {
     margin: 2.5vh auto;
     width: 90vw;
     height: auto;
