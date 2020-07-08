@@ -11,6 +11,11 @@ html {
     font-size: calc(100vw/75)
 }
 
+.center {
+    font-size: 10rem;
+    line-height: 100vh;
+}
+
 .title {
     width: 100vw;
     height: 15vh;
