@@ -1,7 +1,34 @@
 window.onload = function() {
     //点击图片进入预览
-    var $Dom = document.querySelector(".preview");
-    $Dom.onclick = function() {
+    /*     var $Dom = document.querySelectorAll(".preview");
+        console.log($Dom);
+        for (var i in $Dom) {
+            console.log(document.querySelectorAll(".preview"));
+            i.onclick = function() {
+                var temp = this.src;
+                var objE = document.createElement("div");
+                objE.innerHTML = '<div class="bgM" >' +
+                    '<img src="' + temp + '"  id="img_scan" class="img-custom-img2"/>' +
+                    '</div>';
+                document.body.appendChild(objE.children[0]);
+                //退出图片预览事件
+                var $bg = document.querySelector(".bgM");
+                $bg.onclick = function() {
+                    var dm = document.querySelector(".bgM");
+                    document.body.removeChild(dm);
+                }
+
+                var $img = document.querySelector(".img-custom-img2");
+
+                $img.onclick = function(event) {
+                    event.stopPropagation();
+                }
+
+                createEvent(); //自定义事件
+                previewImg(); //图片预览事件监听
+            }
+        } */
+    $('.preview').click(function() {
         var temp = this.src;
         var objE = document.createElement("div");
         objE.innerHTML = '<div class="bgM" >' +
@@ -23,7 +50,7 @@ window.onload = function() {
 
         createEvent(); //自定义事件
         previewImg(); //图片预览事件监听
-    }
+    });
 
 };
 /*
