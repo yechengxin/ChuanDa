@@ -19,7 +19,7 @@
                     简介
                 </div>
                 <div class="content_1">
-                    <div class="image image0">
+                    <div class="image image0 pinch-zoom">
                         <img class="preview" src="images/fm.png">
                     </div>
                     <div class="text text0">
@@ -84,7 +84,7 @@
                 </div>
                 <div class="content">
                     <div class="text text5">
-                        供应商与管理员可以通过该平台实现线上对接账单，并且管理员可根据相关制度及实际情况进行审核及结算。                    </div>
+                        供应商与管理员可以通过该平台实现线上对接账单，并且管理员可根据相关制度及实际情况进行审核及结算。 </div>
                     <div class="image image5">
                         <img src="./images/duizhang_1.png" onclick="img_click(this)">
                     </div>
@@ -99,12 +99,11 @@
                 </div>
                 <div class="content">
                     <div class="text text6">
-                        平台采取pc端、移动端多平台结合，根据不同需求、不同用户、不同权限等多角色进行复合，在各终端提现不同的优势与快捷。本平台针对管控品及日常用品分别体现了“及时申请及时审，随时采购随时看”的时效性。                    </div>
+                        平台采取pc端、移动端多平台结合，根据不同需求、不同用户、不同权限等多角色进行复合，在各终端提现不同的优势与快捷。本平台针对管控品及日常用品分别体现了“及时申请及时审，随时采购随时看”的时效性。 </div>
                     <div class="title title6">联系方式：</div>
                     <div class="lianxi text6">
-                        名称：四川智胜慧安信息技术有限公司<br> 
-                        地址：成都武侯区武科东一路7号智胜大厦7楼720室<br> 
-                        电话：83232737
+                        名称：四川智胜慧安信息技术有限公司<br> 地址：成都武侯区武科东一路7号智胜大厦7楼720室
+                        <br> 电话：83232737
                     </div>
                     <a href="https://yechengxin.github.io/ChuanDa/test.html">test</a>
                 </div>
@@ -115,5 +114,13 @@
 <script src="js/jquery-latest.js"></script>
 <script type="text/javascript" src="js/scoll.js"></script>
 <script type="text/javascript" src="js/image.js"></script>
+<script src="js/pinchzoom.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('div.pinch-zoom').each(function() {
+            new RTP.PinchZoom($(this), {});
+        });
+    })
+</script>
 
 </html>
