@@ -1,8 +1,6 @@
-window.onload = function() {
-    //点击图片进入预览
-    var $Dom = document.querySelector(".preview");
-    $Dom.onclick = function() {
-        var temp = this.src;
+var img_click = function(obj) {
+    console.log("点击了图片")
+        var temp = obj.src;
         var objE = document.createElement("div");
         objE.innerHTML = '<div class="bgM" >' +
             '<img src="' + temp + '"  id="img_scan" class="img-custom-img2"/>' +
@@ -23,9 +21,7 @@ window.onload = function() {
 
         createEvent(); //自定义事件
         previewImg(); //图片预览事件监听
-    }
-
-};
+}
 /*
  *  自定义移动端手势事件  
  *  事件：
