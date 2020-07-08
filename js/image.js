@@ -165,14 +165,10 @@ var previewImg = function() {
     function maxMove() {
         //最大可拖动范围
         var sca = tMatrix[0];
-        /*         maxSwipeLeft = Math.abs(sca - 1) * originLast[0];
-                maxSwipeRight = Math.abs(sca - 1) * (imgWidth - originLast[0]);
-                maxSwipeTop = Math.abs(sca - 1) * originLast[1];
-                maxSwipeBottom = Math.abs(sca - 1) * (imgHeight - originLast[1]); */
         maxSwipeLeft = Math.abs(sca - 1) * originLast[0];
         maxSwipeRight = Math.abs(sca - 1) * (imgWidth - originLast[0]);
-        maxSwipeTop = 0;
-        maxSwipeBottom = 0;
+        maxSwipeTop = Math.abs(sca - 1) * originLast[1];
+        maxSwipeBottom = Math.abs(sca - 1) * (imgHeight - originLast[1]);
     }
 
     function gesturef(event) {
