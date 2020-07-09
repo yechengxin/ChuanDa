@@ -1,7 +1,4 @@
 window.onload = function () {
-    $(".title7").css({
-        "margin-top":"0px",
-    });
     var hight = document.body.offsetHeight
     var oneVh = hight/100
     var h_title7 = document.getElementsByClassName("title7")[0].offsetHeight

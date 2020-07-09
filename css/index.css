@@ -18,6 +18,7 @@ html {
     margin: 0 1vw;
     color: rgb(255, 255, 255, 0.7);
     letter-spacing:4vw;
+    text-indent: 4vw;
     text-align: center;
 }
 .title0{
@@ -35,7 +36,6 @@ html {
     font-size: 5rem;
     position: relative;
     color: rgb(255, 255, 255, 0.7);
-    text-align: center;
 }
 
 .text {
@@ -72,7 +72,7 @@ html {
 }
 
 .lianxi {
-    margin: 2.5vh auto;
+    margin: 0 auto;
     width: 90vw;
     height: auto;
     max-width: 300px;
@@ -81,9 +81,4 @@ html {
     font-size: 3rem;
     position: relative;
     color: rgb(255, 255, 255, 0.7);
-}
-
-.center {
-    font-size: 10rem;
-    line-height: 100vh;
 }
