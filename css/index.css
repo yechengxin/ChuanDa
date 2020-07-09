@@ -20,6 +20,8 @@ html {
     letter-spacing:4vw;
     text-indent: 4vw;
     text-align: center;
+    font-family: STFangsong;
+    font-weight: 900;
 }
 .title0{
     height: 15vh;
@@ -36,6 +38,7 @@ html {
     font-size: 5rem;
     position: relative;
     color: rgb(255, 255, 255, 0.7);
+    font-family: STsong;
 }
 
 .text {
@@ -48,16 +51,14 @@ html {
     font-size: 4rem;
     text-indent: 2em;
     position: relative;
-    color: rgb(255, 255, 255, 0.7)
+    color: rgb(255, 255, 255, 0.7);
+    font-family: STsong;
 }
 .text0{
     font-size: 3.5rem;
     line-height: 4.5vh;
 }
-.text4{
-    font-size: 3.5rem;
-    line-height: 4.5vh;
-}
+
 .image {
     margin: 2.5vh auto;
     width: 100vw;
@@ -78,7 +79,8 @@ html {
     max-width: 300px;
     text-align: center;
     line-height: 5vh;
-    font-size: 3rem;
+    font-size: 3.5rem;
     position: relative;
     color: rgb(255, 255, 255, 0.7);
+    font-family: STsong;
 }
