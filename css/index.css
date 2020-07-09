@@ -16,17 +16,14 @@ html {
     font-size: 8rem;
     line-height: 20vh;
     position: relative;
-    border-radius: 30px;
+    /* border-radius: 30px; */
     margin: 0 1vw;
     color: rgb(255, 255, 255, 0.7);
     letter-spacing:4vw;
+    text-align: center;
     /* background-color:rgb(255, 255, 255, 0.1); */
 }
 .title0{
-    height: 15vh;
-    line-height: 15vh;
-}
-.title6{
     height: 15vh;
     line-height: 15vh;
 }

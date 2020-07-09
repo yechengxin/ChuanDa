@@ -30,8 +30,6 @@ var pages = function (obj) {
     window.addEventListener('resize', getH, false);
     //touchStart
     var touchstart = function (event) {
-        console.log("start" + n)
-        
         if (!event.touches.length) {
             return;
         }
@@ -40,7 +38,6 @@ var pages = function (obj) {
     };
     //touchMove
     var touchmove = function (event) {
-        console.log("move" + n)
         if (!event.touches.length) {
             return;
         }
@@ -49,7 +46,6 @@ var pages = function (obj) {
     };
     //touchEnd
     var touchend = function (event) {
-        console.log("end first" + n)
         let after = n;
         //位移小于+-50的不翻页
         if (moveY < -50) n++;
@@ -59,7 +55,6 @@ var pages = function (obj) {
         if (n > len - 1) n = len - 1;
         //重定位
         box2.style.transform = 'translateY(' + (-n * 10) + '%)'; //根据百分比位置移动页面
-        console.log("end last" + n)
         if(after != n){
             $(".title"+n).css({
                 "animation": "text 3s",
