@@ -15,5 +15,6 @@
     height: 10%;
     background-color: #fdfdfd;
     text-align: center;
-    background: url("../images/bj.gif") repeat;
+    background: url("../images/bg1.png");
+    background-size: 100%;
 }
